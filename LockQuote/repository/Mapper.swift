@@ -22,8 +22,10 @@ extension SearchResponse {
 extension Song {
     init(dto: SongDTO) {
         self.init(
+            id: String(dto.id), 
             name: dto.title,
-            artist: dto.primary_artist.name
+            artist: dto.primary_artist.name,
+            apiPath: dto.api_path
         )
     }
 }

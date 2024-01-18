@@ -34,9 +34,9 @@ struct SongItemView_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             VStack {
-                SongItemView(song: .init(name: "Song name asdf asdfad asdfasd fasdf asdfas dfasdf as", artist: "Artist name"))
-                SongItemView(song: .init(name: "Song name", artist: "Artist name"))
-                SongItemView(song: .init(name: "Song name", artist: "Artist name"))
+                SongItemView(song: .init(id: "", name: "Song name asdf asdfad asdfasd fasdf asdfas dfasdf as", artist: "Artist name", apiPath: ""))
+                SongItemView(song: .skeleton)
+                SongItemView(song: .skeleton)
             }
         }
         .background(Color.lightGrey)

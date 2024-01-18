@@ -12,10 +12,10 @@ struct SearchResultsView: View {
     
     private var songsAndSkeleton: [Song] {
         viewModel.songResults.isEmpty && viewModel.isLoading ?
-            Array(repeating: .skeleton, count: 5) :
-            viewModel.songResults
+        Array(repeating: .skeleton, count: 5) :
+        viewModel.songResults
     }
-    
+        
     var body: some View {
         VStack(spacing: .S) {
             SearchBox(query: $viewModel.query, onPressedIntro: search)
@@ -23,11 +23,48 @@ struct SearchResultsView: View {
             
             List {
                 ForEach(songsAndSkeleton, id: \.self) { song in
-                    SongItemView(song: song)
+                    Button(action: {
+                        viewModel.itemTapped(song)
+                    }, label: {
+                        SongItemView(song: song)
+                    })
+                    .buttonStyle(.plain)
                 }
             }
             .redacted(reason: viewModel.isLoading ? .placeholder : [])
             .background(Color.lightGrey)
+        }
+        .sheet(item: $viewModel.selectedItem) { song in
+            VStack {
+                HStack {
+                    Text(
+                        viewModel.currentPasteboard
+                        ?? "Select an excerpt from the lyric, up to 15 words, and hit Copy"
+                    )
+                    .padding()
+                    
+                    Button(
+                        "USE SELECTION (\(viewModel.countWords()))"
+                    ) {
+                        viewModel.checkSelection()
+                        
+                        if viewModel.selectionError {
+                            // to do show error selection too small / too large
+                        } else {
+                            // to do navigate with selection to generated password view
+                        }
+                    }
+                    .buttonStyle(.bordered)
+                    .padding()
+                }
+                .foregroundColor(Color.white)
+                
+                LyricWebView(url: URL(string: viewModel.buildUrl())!)
+                    .ignoresSafeArea()
+                    .navigationTitle(song.name)
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .background(Color.primaryPink)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.primaryPink)

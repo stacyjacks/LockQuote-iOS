@@ -31,6 +31,7 @@
 		5D76D5EA2AEBC48100BAF61E /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5E92AEBC48100BAF61E /* SearchBox.swift */; };
 		5DBD0ADF2B55512F007EA710 /* Binding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0ADE2B55512F007EA710 /* Binding+.swift */; };
 		5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */; };
+		5DBD0AE32B59458C007EA710 /* LyricWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0AE22B59458C007EA710 /* LyricWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		5D76D5E92AEBC48100BAF61E /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		5DBD0ADE2B55512F007EA710 /* Binding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+.swift"; sourceTree = "<group>"; };
 		5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		5DBD0AE22B59458C007EA710 /* LyricWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				5D76D5E52AEBC12300BAF61E /* SearchResultsView.swift */,
 				5D76D5E92AEBC48100BAF61E /* SearchBox.swift */,
 				5D1A8D7E2AF3B1BD0043736D /* SongItemView.swift */,
+				5DBD0AE22B59458C007EA710 /* LyricWebView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */,
+				5DBD0AE32B59458C007EA710 /* LyricWebView.swift in Sources */,
 				5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */,
 				5D2690AC2B076F6A004CD667 /* HitDTO.swift in Sources */,
 				5D76D5EA2AEBC48100BAF61E /* SearchBox.swift in Sources */,
