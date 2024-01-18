@@ -10,43 +10,41 @@ import SwiftUI
 struct SearchResultsView: View {
     @StateObject var viewModel: SearchResultsViewModel
     
-    init(query: String) {
-        self._viewModel = .init(wrappedValue: SearchResultsViewModel(query: query))
+    private var songsAndSkeleton: [Song] {
+        viewModel.songResults.isEmpty && viewModel.isLoading ?
+            Array(repeating: .skeleton, count: 5) :
+            viewModel.songResults
     }
     
     var body: some View {
         VStack(spacing: .S) {
-            SearchBox(query: $viewModel.query)
+            SearchBox(query: $viewModel.query, onPressedIntro: search)
                 .padding(.horizontal, .S)
             
-            if viewModel.isLoading {
-                VStack(alignment: .leading) {
-                    ForEach(Array(0...5), id: \.self) { song in
-                        SongItemView(song: .skeleton)
-                    }
-                    .redacted(reason: .placeholder)
+            List {
+                ForEach(songsAndSkeleton, id: \.self) { song in
+                    SongItemView(song: song)
                 }
-                .padding(10)
-                .background(Color.lightGrey)
-            } else {
-                VStack(alignment: .leading) {
-                    ForEach(viewModel.songResults, id: \.self) { song in
-                        SongItemView(song: song).onTapGesture {
-                            
-                        }
-                    }
-                }
-                .padding(10)
-                .background(Color.lightGrey)
             }
+            .redacted(reason: viewModel.isLoading ? .placeholder : [])
+            .background(Color.lightGrey)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.primaryPink)
+        .task {
+            try? await viewModel.searchSongs(query: viewModel.query)
+        }
+    }
+    
+    private func search(query: String) {
+        Task {
+            try await viewModel.searchSongs(query: query)
+        }
     }
 }
 
 struct ContentViews_Previews: PreviewProvider {
     static var previews: some View {
-        SearchResultsView(query: "")
+        SearchResultsView(viewModel: .init(query: ""))
     }
 }
