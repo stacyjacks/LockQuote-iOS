@@ -52,6 +52,7 @@ final class SearchResultsViewModel: ObservableObject {
     private func bind() {
         center.publisher(for: UIPasteboard.changedNotification).sink { [weak self] _ in
             self?.currentPasteboard = UIPasteboard.general.string
+            self?.removeBrackets()
         }.store(in: &cancellables)
     }
     
@@ -70,22 +71,11 @@ final class SearchResultsViewModel: ObservableObject {
     
     func buildUrl() -> String {
         return "https://genius.com" + selectedItem!.apiPath
-/*    */}
+    }
     
     func itemTapped(_ song: Song) {
         selectedItem = song
     }
-    
-//    func cleanPasteboard() {
-//        if currentPasteboard != nil {
-//            let openingBracket = currentPasteboard!.startIndex
-//            let closingBracket = currentPasteboard!.endIndex
-//            
-//            if currentPasteboard!.contains("[") || currentPasteboard!.contains("]") {
-//                let range = openingBracket..<closingBracket
-//                currentPasteboard!.removeSubrange(range)
-//            }
-//    }
     
     func countWords() -> Int {
         return currentPasteboard?.split(separator: " ").count ?? 0
@@ -94,6 +84,18 @@ final class SearchResultsViewModel: ObservableObject {
     func checkSelection() {
         if countWords() > 15 || countWords() < 3 {
             selectionError = true
+        }
+    }
+    
+    
+    
+    private func removeBrackets() {
+        if currentPasteboard != nil {
+            guard let openingBracket = currentPasteboard!.firstIndex(of: "[") else { return }
+            guard let closingBracket = currentPasteboard!.firstIndex(of: "]") else { return }
+            
+            let range = openingBracket...closingBracket
+            currentPasteboard!.removeSubrange(range)
         }
     }
 }

@@ -20,6 +20,8 @@
 		5D2690B72B0E1537004CD667 /* SearchResultsLiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2690B62B0E1537004CD667 /* SearchResultsLiveRepository.swift */; };
 		5D2690B92B0E254E004CD667 /* SearchResultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2690B82B0E254E004CD667 /* SearchResultsRepository.swift */; };
 		5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2690BB2B0E27F0004CD667 /* Mapper.swift */; };
+		5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464A62B5FCCEA0027AABB /* String+.swift */; };
+		5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */; };
 		5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */; };
 		5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */; };
 		5D76D5BE2AEBA4E000BAF61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D76D5BD2AEBA4E000BAF61E /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		5D2690B62B0E1537004CD667 /* SearchResultsLiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsLiveRepository.swift; sourceTree = "<group>"; };
 		5D2690B82B0E254E004CD667 /* SearchResultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsRepository.swift; sourceTree = "<group>"; };
 		5D2690BB2B0E27F0004CD667 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
 		5D76D5B62AEBA4DD00BAF61E /* LockQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteApp.swift; sourceTree = "<group>"; };
 		5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		5D76D5AD2AEBA4DD00BAF61E = {
 			isa = PBXGroup;
 			children = (
+				5D7464A62B5FCCEA0027AABB /* String+.swift */,
 				5DBD0ADE2B55512F007EA710 /* Binding+.swift */,
 				5D76D5B82AEBA4DD00BAF61E /* LockQuote */,
 				5D76D5C92AEBA4E000BAF61E /* LockQuoteTests */,
@@ -215,6 +220,7 @@
 				5D76D5E92AEBC48100BAF61E /* SearchBox.swift */,
 				5D1A8D7E2AF3B1BD0043736D /* SongItemView.swift */,
 				5DBD0AE22B59458C007EA710 /* LyricWebView.swift */,
+				5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 				5D76D5E62AEBC12300BAF61E /* SearchResultsView.swift in Sources */,
 				5D2690B72B0E1537004CD667 /* SearchResultsLiveRepository.swift in Sources */,
 				5DBD0ADF2B55512F007EA710 /* Binding+.swift in Sources */,
+				5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */,
 				5D2690B22B077833004CD667 /* ApiService.swift in Sources */,
 				5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */,
 				5D2690A72B076EAC004CD667 /* SearchResponseDTO.swift in Sources */,
@@ -379,6 +386,7 @@
 				5D1A8D822AF3BBCC0043736D /* SearchResultsViewModel.swift in Sources */,
 				5D2690AA2B076F1B004CD667 /* HitsDTO.swift in Sources */,
 				5D1A8D862AF3EFDD0043736D /* Extensions.swift in Sources */,
+				5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
