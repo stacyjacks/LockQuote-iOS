@@ -27,34 +27,19 @@ extension Song {
 
 final class SearchResultsViewModel: ObservableObject {
     private let repository: SearchResultsRepository
-    private let center: NotificationCenter
-    private var cancellables: Set<AnyCancellable> = .init()
     
     init(
         query: String,
-        repository: SearchResultsRepository = SearchResultsLiveRepository(),
-        center: NotificationCenter = .default
+        repository: SearchResultsRepository = SearchResultsLiveRepository()
     ) {
         self.query = query
         self.repository = repository
-        self.center = center
-        
-        bind()
     }
     
     @Published var songResults: [Song] = []
     @Published var query: String
     @Published var isLoading = true
     @Published var selectionError = false
-    @Published var selectedItem: Song?
-    @Published var currentPasteboard: String?
-    
-    private func bind() {
-        center.publisher(for: UIPasteboard.changedNotification).sink { [weak self] _ in
-            self?.currentPasteboard = UIPasteboard.general.string
-            self?.removeBrackets()
-        }.store(in: &cancellables)
-    }
     
     @MainActor
     func searchSongs(query: String) async throws {
@@ -66,36 +51,6 @@ final class SearchResultsViewModel: ObservableObject {
             } catch {
                 print(error)
             }
-        }
-    }
-    
-    func buildUrl() -> String {
-        return "https://genius.com" + selectedItem!.apiPath
-    }
-    
-    func itemTapped(_ song: Song) {
-        selectedItem = song
-    }
-    
-    func countWords() -> Int {
-        return currentPasteboard?.split(separator: " ").count ?? 0
-    }
-    
-    func checkSelection() {
-        if countWords() > 15 || countWords() < 3 {
-            selectionError = true
-        }
-    }
-    
-    
-    
-    private func removeBrackets() {
-        if currentPasteboard != nil {
-            guard let openingBracket = currentPasteboard!.firstIndex(of: "[") else { return }
-            guard let closingBracket = currentPasteboard!.firstIndex(of: "]") else { return }
-            
-            let range = openingBracket...closingBracket
-            currentPasteboard!.removeSubrange(range)
         }
     }
 }

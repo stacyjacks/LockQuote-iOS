@@ -22,6 +22,9 @@
 		5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2690BB2B0E27F0004CD667 /* Mapper.swift */; };
 		5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464A62B5FCCEA0027AABB /* String+.swift */; };
 		5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */; };
+		5D7464AD2B6121E50027AABB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AC2B6121E50027AABB /* View+.swift */; };
+		5D7464AF2B6121FB0027AABB /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AE2B6121FB0027AABB /* RoundedCorner.swift */; };
+		5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */; };
 		5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */; };
 		5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */; };
 		5D76D5BE2AEBA4E000BAF61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D76D5BD2AEBA4E000BAF61E /* Assets.xcassets */; };
@@ -69,6 +72,9 @@
 		5D2690BB2B0E27F0004CD667 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
+		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		5D7464AE2B6121FB0027AABB /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordViewModel.swift; sourceTree = "<group>"; };
 		5D76D5B62AEBA4DD00BAF61E /* LockQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteApp.swift; sourceTree = "<group>"; };
 		5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			children = (
 				5D1A8D812AF3BBCC0043736D /* SearchResultsViewModel.swift */,
 				5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */,
+				5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 		5D76D5AD2AEBA4DD00BAF61E = {
 			isa = PBXGroup;
 			children = (
+				5D7464AE2B6121FB0027AABB /* RoundedCorner.swift */,
+				5D7464AC2B6121E50027AABB /* View+.swift */,
 				5D7464A62B5FCCEA0027AABB /* String+.swift */,
 				5DBD0ADE2B55512F007EA710 /* Binding+.swift */,
 				5D76D5B82AEBA4DD00BAF61E /* LockQuote */,
@@ -365,10 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7464AF2B6121FB0027AABB /* RoundedCorner.swift in Sources */,
 				5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */,
 				5DBD0AE32B59458C007EA710 /* LyricWebView.swift in Sources */,
 				5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */,
 				5D2690AC2B076F6A004CD667 /* HitDTO.swift in Sources */,
+				5D7464AD2B6121E50027AABB /* View+.swift in Sources */,
 				5D76D5EA2AEBC48100BAF61E /* SearchBox.swift in Sources */,
 				5D2690B42B077915004CD667 /* Environment.swift in Sources */,
 				5D2690B02B0770B4004CD667 /* PrimaryArtistDTO.swift in Sources */,
@@ -384,6 +395,7 @@
 				5D2690B92B0E254E004CD667 /* SearchResultsRepository.swift in Sources */,
 				5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */,
 				5D1A8D822AF3BBCC0043736D /* SearchResultsViewModel.swift in Sources */,
+				5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */,
 				5D2690AA2B076F1B004CD667 /* HitsDTO.swift in Sources */,
 				5D1A8D862AF3EFDD0043736D /* Extensions.swift in Sources */,
 				5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */,

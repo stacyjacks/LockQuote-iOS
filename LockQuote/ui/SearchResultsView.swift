@@ -17,59 +17,28 @@ struct SearchResultsView: View {
     }
         
     var body: some View {
-        VStack(spacing: .S) {
-            SearchBox(query: $viewModel.query, onPressedIntro: search)
-                .padding(.horizontal, .S)
-            
-            List {
-                ForEach(songsAndSkeleton, id: \.self) { song in
-                    Button(action: {
-                        viewModel.itemTapped(song)
-                    }, label: {
-                        SongItemView(song: song)
-                    })
-                    .buttonStyle(.plain)
-                }
-            }
-            .redacted(reason: viewModel.isLoading ? .placeholder : [])
-            .background(Color.lightGrey)
-        }
-        .sheet(item: $viewModel.selectedItem) { song in
-            VStack {
-                HStack {
-                    Text(
-                        viewModel.currentPasteboard
-                        ?? "Select an excerpt from the lyric, up to 15 words, and hit Copy"
-                    )
-                    .padding()
-                    
-                    Button(
-                        "USE SELECTION (\(viewModel.countWords()))"
-                    ) {
-                        viewModel.checkSelection()
-                        
-                        if viewModel.selectionError {
-                            // to do show error selection too small / too large
-                        } else {
-                            // to do navigate with selection to generated password view
-                        }
-                    }
-                    .buttonStyle(.bordered)
-                    .padding()
-                }
-                .foregroundColor(Color.white)
+        NavigationStack {
+            VStack(spacing: .S) {
+                SearchBox(query: $viewModel.query, onPressedIntro: search)
+                    .padding(.horizontal, .S)
                 
-                LyricWebView(url: URL(string: viewModel.buildUrl())!)
-                    .ignoresSafeArea()
-                    .navigationTitle(song.name)
-                    .navigationBarTitleDisplayMode(.inline)
+                List {
+                    ForEach(songsAndSkeleton, id: \.self) { song in
+                        NavigationLink {
+                            LyricView(viewModel: .init(path: song.apiPath))
+                        } label: {
+                            SongItemView(song: song)
+                        }.buttonStyle(.plain)
+                    }
+                }
+                .redacted(reason: viewModel.isLoading ? .placeholder : [])
+                .background(Color.lightGrey)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .background(Color.primaryPink)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color.primaryPink)
-        .task {
-            try? await viewModel.searchSongs(query: viewModel.query)
+            .task {
+                try? await viewModel.searchSongs(query: viewModel.query)
+            }
         }
     }
     

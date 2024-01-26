@@ -27,6 +27,9 @@ extension Color {
 }
 
 extension CGFloat {
+    /// 8 pt of spacing
+    static var XS = 8.0
+    
     /// 16 pt of spacing
     static var S = 16.0
     
