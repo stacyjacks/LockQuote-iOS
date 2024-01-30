@@ -22,7 +22,11 @@ struct LyricView: View {
                     
                     NavigationLink(
                         "USE SELECTION (\(viewModel.countWords()))",
-                        destination: { GeneratedPasswordView(viewModel: .init()) }
+                        destination: {
+                            GeneratedPasswordView(
+                                viewModel: .init(selectedLyric: viewModel.currentPasteboard!)
+                            )
+                        }
                     )
                     .buttonStyle(.bordered)
                     .padding()

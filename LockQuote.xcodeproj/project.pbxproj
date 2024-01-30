@@ -25,6 +25,8 @@
 		5D7464AD2B6121E50027AABB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AC2B6121E50027AABB /* View+.swift */; };
 		5D7464AF2B6121FB0027AABB /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AE2B6121FB0027AABB /* RoundedCorner.swift */; };
 		5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */; };
+		5D7464B32B6291FE0027AABB /* LyricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B22B6291FE0027AABB /* LyricView.swift */; };
+		5D7464B52B62923E0027AABB /* LyricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B42B62923E0027AABB /* LyricViewModel.swift */; };
 		5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */; };
 		5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */; };
 		5D76D5BE2AEBA4E000BAF61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D76D5BD2AEBA4E000BAF61E /* Assets.xcassets */; };
@@ -36,7 +38,7 @@
 		5D76D5EA2AEBC48100BAF61E /* SearchBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5E92AEBC48100BAF61E /* SearchBox.swift */; };
 		5DBD0ADF2B55512F007EA710 /* Binding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0ADE2B55512F007EA710 /* Binding+.swift */; };
 		5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */; };
-		5DBD0AE32B59458C007EA710 /* LyricWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0AE22B59458C007EA710 /* LyricWebView.swift */; };
+		5DBD0AE32B59458C007EA710 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0AE22B59458C007EA710 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		5D7464AE2B6121FB0027AABB /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 		5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordViewModel.swift; sourceTree = "<group>"; };
+		5D7464B22B6291FE0027AABB /* LyricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricView.swift; sourceTree = "<group>"; };
+		5D7464B42B62923E0027AABB /* LyricViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricViewModel.swift; sourceTree = "<group>"; };
 		5D76D5B62AEBA4DD00BAF61E /* LockQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteApp.swift; sourceTree = "<group>"; };
 		5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -89,7 +93,7 @@
 		5D76D5E92AEBC48100BAF61E /* SearchBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBox.swift; sourceTree = "<group>"; };
 		5DBD0ADE2B55512F007EA710 /* Binding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+.swift"; sourceTree = "<group>"; };
 		5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
-		5DBD0AE22B59458C007EA710 /* LyricWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricWebView.swift; sourceTree = "<group>"; };
+		5DBD0AE22B59458C007EA710 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 				5D1A8D812AF3BBCC0043736D /* SearchResultsViewModel.swift */,
 				5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */,
 				5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */,
+				5D7464B42B62923E0027AABB /* LyricViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -228,8 +233,9 @@
 				5D76D5E52AEBC12300BAF61E /* SearchResultsView.swift */,
 				5D76D5E92AEBC48100BAF61E /* SearchBox.swift */,
 				5D1A8D7E2AF3B1BD0043736D /* SongItemView.swift */,
-				5DBD0AE22B59458C007EA710 /* LyricWebView.swift */,
+				5DBD0AE22B59458C007EA710 /* WebView.swift */,
 				5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */,
+				5D7464B22B6291FE0027AABB /* LyricView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -376,7 +382,7 @@
 			files = (
 				5D7464AF2B6121FB0027AABB /* RoundedCorner.swift in Sources */,
 				5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */,
-				5DBD0AE32B59458C007EA710 /* LyricWebView.swift in Sources */,
+				5DBD0AE32B59458C007EA710 /* WebView.swift in Sources */,
 				5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */,
 				5D2690AC2B076F6A004CD667 /* HitDTO.swift in Sources */,
 				5D7464AD2B6121E50027AABB /* View+.swift in Sources */,
@@ -392,10 +398,12 @@
 				5D2690B22B077833004CD667 /* ApiService.swift in Sources */,
 				5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */,
 				5D2690A72B076EAC004CD667 /* SearchResponseDTO.swift in Sources */,
+				5D7464B32B6291FE0027AABB /* LyricView.swift in Sources */,
 				5D2690B92B0E254E004CD667 /* SearchResultsRepository.swift in Sources */,
 				5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */,
 				5D1A8D822AF3BBCC0043736D /* SearchResultsViewModel.swift in Sources */,
 				5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */,
+				5D7464B52B62923E0027AABB /* LyricViewModel.swift in Sources */,
 				5D2690AA2B076F1B004CD667 /* HitsDTO.swift in Sources */,
 				5D1A8D862AF3EFDD0043736D /* Extensions.swift in Sources */,
 				5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */,
