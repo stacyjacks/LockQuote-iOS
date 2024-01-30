@@ -15,30 +15,28 @@ struct SearchResultsView: View {
         Array(repeating: .skeleton, count: 5) :
         viewModel.songResults
     }
-        
+    
     var body: some View {
-        NavigationStack {
-            VStack(spacing: .S) {
-                SearchBox(query: $viewModel.query, onPressedIntro: search)
-                    .padding(.horizontal, .S)
-                
-                List {
-                    ForEach(songsAndSkeleton, id: \.self) { song in
-                        NavigationLink {
-                            LyricView(viewModel: .init(path: song.apiPath))
-                        } label: {
-                            SongItemView(song: song)
-                        }.buttonStyle(.plain)
-                    }
+        VStack(spacing: .S) {
+            SearchBox(query: $viewModel.query, onPressedIntro: search)
+                .padding(.horizontal, .S)
+            
+            List {
+                ForEach(songsAndSkeleton, id: \.self) { song in
+                    NavigationLink {
+                        LyricView(viewModel: .init(path: song.apiPath))
+                    } label: {
+                        SongItemView(song: song)
+                    }.buttonStyle(.plain)
                 }
-                .redacted(reason: viewModel.isLoading ? .placeholder : [])
-                .background(Color.lightGrey)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .background(Color.primaryPink)
-            .task {
-                try? await viewModel.searchSongs(query: viewModel.query)
-            }
+            .redacted(reason: viewModel.isLoading ? .placeholder : [])
+            .background(Color.lightGrey)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .background(Color.primaryPink)
+        .task {
+            try? await viewModel.searchSongs(query: viewModel.query)
         }
     }
     

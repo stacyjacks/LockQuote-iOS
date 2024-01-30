@@ -11,38 +11,36 @@ struct LyricView: View {
     @StateObject var viewModel: LyricViewModel
     
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    Text(
-                        viewModel.currentPasteboard
-                        ?? "Select an excerpt from the lyric, up to 15 words, and hit Copy"
-                    )
-                    .padding()
-                    
-                    NavigationLink(
-                        "USE SELECTION (\(viewModel.countWords()))",
-                        destination: {
-                            GeneratedPasswordView(
-                                viewModel: .init(selectedLyric: viewModel.currentPasteboard!)
-                            )
-                        }
-                    )
-                    .buttonStyle(.bordered)
-                    .padding()
-
-                }
-                .foregroundColor(Color.white)
+        VStack {
+            HStack {
+                Text(
+                    viewModel.currentPasteboard
+                    ?? "Select an excerpt from the lyric from 4 to 15 words, and hit Copy"
+                )
+                .padding()
                 
-                WebView(url: URL(string: viewModel.buildUrl())!)
-                    .ignoresSafeArea()
-                    .navigationBarTitleDisplayMode(.inline)
+                NavigationLink(
+                    "USE SELECTION (\(viewModel.countWords()))",
+                    destination: {
+                        GeneratedPasswordView(
+                            viewModel: .init(selectedLyric: viewModel.currentPasteboard!)
+                        )
+                    }
+                )
+                .buttonStyle(.bordered)
+                .padding()
+                .disabled(viewModel.selectionError)
             }
-            .background(Color.primaryPink)
+            .foregroundColor(Color.white)
+            
+            WebView(url: URL(string: viewModel.buildUrl())!)
+                .ignoresSafeArea()
+                .navigationBarTitleDisplayMode(.inline)
         }
+        .background(Color.primaryPink)
     }
 }
 
 #Preview {
-    LyricView(viewModel: .init(path: ""))
+    LyricView(viewModel: .init(path: "/Joy-division-new-dawn-fades-lyrics"))
 }

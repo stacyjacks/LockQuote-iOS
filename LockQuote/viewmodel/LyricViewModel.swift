@@ -24,13 +24,14 @@ final class LyricViewModel: ObservableObject {
         bind()
     }
     
-    @Published var selectionError = false
+    @Published var selectionError = true
     @Published var currentPasteboard: String?
     
     private func bind() {
         center.publisher(for: UIPasteboard.changedNotification).sink { [weak self] _ in
             self?.currentPasteboard = UIPasteboard.general.string
             self?.removeBrackets()
+            self?.checkSelection()
         }.store(in: &cancellables)
     }
     
@@ -42,9 +43,11 @@ final class LyricViewModel: ObservableObject {
         return currentPasteboard?.split(separator: " ").count ?? 0
     }
     
-    func checkSelection() {
-        if countWords() > 15 || countWords() < 3 {
+    private func checkSelection() {
+        if countWords() > 15 || countWords() < 4 {
             selectionError = true
+        } else {
+            selectionError = false
         }
     }
     

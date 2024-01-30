@@ -50,11 +50,11 @@ struct GeneratedPasswordView: View {
                     }
                     .padding()
                     
-                    Image(systemName: "brain.filled.head.profile")
+                    Image(.cerebro)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
-                        .padding()
+                        .padding(.horizontal)
                 }
                 .padding()
                 .background(Color.lightGrey)
@@ -106,6 +106,6 @@ struct GeneratedPasswordView: View {
 
 #Preview {
     GeneratedPasswordView(
-        viewModel: .init(selectedLyric: "You could be young again, \n Be un-reborn Again")
+        viewModel: .init(selectedLyric: "You could be young again, \n Be un-reborn again")
     )
 }
