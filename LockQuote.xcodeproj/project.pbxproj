@@ -27,6 +27,8 @@
 		5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */; };
 		5D7464B32B6291FE0027AABB /* LyricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B22B6291FE0027AABB /* LyricView.swift */; };
 		5D7464B52B62923E0027AABB /* LyricViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B42B62923E0027AABB /* LyricViewModel.swift */; };
+		5D7464B72B693A2D0027AABB /* GameTaskOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */; };
+		5D7464B92B6A70930027AABB /* GameTaskOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464B82B6A70930027AABB /* GameTaskOneViewModel.swift */; };
 		5D76D5BA2AEBA4DD00BAF61E /* LockQuoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */; };
 		5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */; };
 		5D76D5BE2AEBA4E000BAF61E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D76D5BD2AEBA4E000BAF61E /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordViewModel.swift; sourceTree = "<group>"; };
 		5D7464B22B6291FE0027AABB /* LyricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricView.swift; sourceTree = "<group>"; };
 		5D7464B42B62923E0027AABB /* LyricViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricViewModel.swift; sourceTree = "<group>"; };
+		5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskOneView.swift; sourceTree = "<group>"; };
+		5D7464B82B6A70930027AABB /* GameTaskOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskOneViewModel.swift; sourceTree = "<group>"; };
 		5D76D5B62AEBA4DD00BAF61E /* LockQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D76D5B92AEBA4DD00BAF61E /* LockQuoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteApp.swift; sourceTree = "<group>"; };
 		5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 				5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */,
 				5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */,
 				5D7464B42B62923E0027AABB /* LyricViewModel.swift */,
+				5D7464B82B6A70930027AABB /* GameTaskOneViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				5DBD0AE22B59458C007EA710 /* WebView.swift */,
 				5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */,
 				5D7464B22B6291FE0027AABB /* LyricView.swift */,
+				5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				5D2690B42B077915004CD667 /* Environment.swift in Sources */,
 				5D2690B02B0770B4004CD667 /* PrimaryArtistDTO.swift in Sources */,
 				5D2690AE2B076FFD004CD667 /* SongDTO.swift in Sources */,
+				5D7464B72B693A2D0027AABB /* GameTaskOneView.swift in Sources */,
 				5D1A8D7F2AF3B1BD0043736D /* SongItemView.swift in Sources */,
 				5D76D5E62AEBC12300BAF61E /* SearchResultsView.swift in Sources */,
 				5D2690B72B0E1537004CD667 /* SearchResultsLiveRepository.swift in Sources */,
@@ -406,6 +413,7 @@
 				5D7464B52B62923E0027AABB /* LyricViewModel.swift in Sources */,
 				5D2690AA2B076F1B004CD667 /* HitsDTO.swift in Sources */,
 				5D1A8D862AF3EFDD0043736D /* Extensions.swift in Sources */,
+				5D7464B92B6A70930027AABB /* GameTaskOneViewModel.swift in Sources */,
 				5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

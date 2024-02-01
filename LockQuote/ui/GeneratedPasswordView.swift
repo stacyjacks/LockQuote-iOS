@@ -18,6 +18,7 @@ struct GeneratedPasswordView: View {
             VStack(spacing: 0) {
                 Text("Take a good look at the selected lyric and the password we've generated for you:")
                     .padding(.vertical)
+                    .multilineTextAlignment(.leading)
                 
                 Text(viewModel.selectedLyric)
                     .padding()
@@ -60,17 +61,18 @@ struct GeneratedPasswordView: View {
                 .background(Color.lightGrey)
                 .cornerRadius(15)
                 
-                Button(action: {
-                    // to do navigation
-                }, label: {
-                    Text(("Help me to memorise it").uppercased())
-                        .padding(.XS)
-                        .foregroundColor(.white)
-                        .background(Color.primaryPink)
-                        .cornerRadius(8)
-                        .bold()
-                        
-                })
+                NavigationLink(
+                    "Help me to memorise it".uppercased(),
+                    destination: {
+                        GameTaskOneView(viewModel: .init(password: viewModel.generatedPassword()))
+                    }
+                )
+                .padding(.XS)
+                .background(Color.primaryPink)
+                .foregroundColor(.white)
+                .cornerRadius(.XS)
+                .bold()
+                .disabled(false)
                 .padding(.XS)
                 
                 Button(action: {
