@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct GameTaskOneView: View {
     @StateObject var viewModel: GameTaskOneViewModel
@@ -20,6 +21,7 @@ struct GameTaskOneView: View {
             VStack {
                 Text("Enter password exactly as it appears below:")
                     .padding(.XS)
+                    .multilineTextAlignment(.leading)
                 HStack {
                     ForEach(viewModel.pwdArray.indices, id: \.self) { index in
                         TextField(
@@ -51,36 +53,42 @@ struct GameTaskOneView: View {
                 }
                 .padding(.M)
                 
-                Button(action: {
-                    viewModel.clearInput()
-                    focusedField = nil
-                }, label: {
-                    Text(("Clear").uppercased())
+                if viewModel.done {
+                    LottieView(animation: .named("checkmarklightgreen"))
+                        .playing(loopMode: .loop)
+                        .resizable()
+                        .frame(width: 250, height: 250)
+                    HStack {
+                        Text("Great!")
+                            .bold()
+                            .onAppear {
+                                focusedField = nil
+                            }
+                        NavigationLink("Continue".uppercased(), destination: {
+                            // to do navigate to game two
+                        })
+                        .frame(alignment: .bottom)
                         .padding(.XS)
+                        .background(Color.lightGreen)
                         .foregroundColor(.white)
-                        .background(Color.primaryPink)
                         .cornerRadius(.XS)
                         .bold()
-                        
-                })
-                .padding(.S)
-                
-                if viewModel.done {
-                    Text("FUCK YEAH!") // to do replace with lottie animation
-                    .onAppear {
-                        focusedField = nil
+                        .disabled(false)
                     }
-                    NavigationLink("Continue".uppercased(), destination: {
-                        // to do navigate to game two
+                } else {
+                    Button(action: {
+                        viewModel.clearInput()
+                        focusedField = nil
+                    }, label: {
+                        Text(("Clear").uppercased())
+                            .padding(.XS)
+                            .foregroundColor(.white)
+                            .background(Color.primaryPink)
+                            .cornerRadius(.XS)
+                            .bold()
+                            
                     })
-                    .frame(maxWidth: .infinity, alignment: .bottom)
-                    .padding(.XS)
-                    .background(Color.primaryPink)
-                    .foregroundColor(.white)
-                    .cornerRadius(.XS)
-                    .bold()
-                    .disabled(false)
-                    .padding(.horizontal)
+                    .padding(.S)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
@@ -98,7 +106,7 @@ struct GameTaskOneView: View {
         if text.isEmpty {
             return .lightGrey
         } else if correct[index]! {
-            return .green
+            return .lightGreen
         } else {
             return .red
         }

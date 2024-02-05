@@ -12,15 +12,25 @@ final class GeneratedPasswordViewModel: ObservableObject {
     
     init(selectedLyric: String) {
         self.selectedLyric = selectedLyric
+        showLoadingForTwoSecs()
     }
     
     @Published var showPwd: Bool = false
+    @Published var hideLoading: Bool = false
     
     func onPwdTapped() {
         if showPwd {
             showPwd = false
         } else {
             showPwd = true
+        }
+    }
+    
+    private func showLoadingForTwoSecs() {
+        if !hideLoading {
+            Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { _ in
+                self.hideLoading = true
+            }
         }
     }
     

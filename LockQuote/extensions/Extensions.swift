@@ -24,6 +24,10 @@ extension Color {
     static var mediumGrey: Color {
         Color("mediumGrey")
     }
+    
+    static var lightGreen: Color {
+        Color("lightGreen")
+    }
 }
 
 extension CGFloat {

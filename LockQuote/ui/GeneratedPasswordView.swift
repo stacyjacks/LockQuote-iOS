@@ -6,95 +6,113 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct GeneratedPasswordView: View {
     @StateObject var viewModel: GeneratedPasswordViewModel
     
     var body: some View {
-        VStack(spacing: .S) {
-            Text("Your password")
-                .foregroundColor(.white)
-            
-            VStack(spacing: 0) {
-                Text("Take a good look at the selected lyric and the password we've generated for you:")
-                    .padding(.vertical)
-                    .multilineTextAlignment(.leading)
+        if !viewModel.hideLoading {
+            VStack {
+                LottieView(animation: .named("loadinglock"))
+                    .playing(loopMode: .playOnce)
+                    .resizable()
+                    .frame(width: 250, height: 250)
+                    .padding(.L)
                 
-                Text(viewModel.selectedLyric)
+                Text("Just a sec...".uppercased())
+                    .foregroundColor(.white)
+                    .bold()
+            }
+            .padding(.L)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .background(Color.primaryPink)
+        } else {
+            VStack(spacing: .S) {
+                Text("Your password")
+                    .foregroundColor(.white)
+                
+                VStack(spacing: 0) {
+                    Text("Take a good look at the selected lyric and the password we've generated for you:")
+                        .padding(.vertical)
+                        .multilineTextAlignment(.leading)
+                    
+                    Text(viewModel.selectedLyric)
+                        .padding()
+                        .background(Color.lightGrey)
+                        .cornerRadius(15, corners: [.topLeft, .bottomRight, .bottomLeft])
+                        .padding()
+                        .italic()
+                    
+                    Text(pwdToggle(
+                        text: viewModel.generatedPassword(),
+                        showPwd: viewModel.showPwd
+                    ))
+                        .onTapGesture {
+                            viewModel.onPwdTapped()
+                        }
+                        .padding(.M)
+                        .font(.system(size: 28, weight: .bold, design: .monospaced))
+                    
+                    Image(systemName: "triangleshape.fill")
+                        .resizable()
+                        .foregroundColor(.lightGrey)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 30, height: 30)
+                    
+                    HStack {
+                        VStack {
+                            Text(String(viewModel.generatedPassword().count))
+                                .font(.system(size: 24, weight: .bold))
+                            Text("characters")
+                        }
+                        .padding()
+                        
+                        Image(.cerebro)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 50, height: 50)
+                            .padding(.horizontal)
+                    }
                     .padding()
                     .background(Color.lightGrey)
-                    .cornerRadius(15, corners: [.topLeft, .bottomRight, .bottomLeft])
-                    .padding()
-                    .italic()
-                
-                Text(pwdToggle(
-                    text: viewModel.generatedPassword(),
-                    showPwd: viewModel.showPwd
-                ))
-                    .onTapGesture {
-                        viewModel.onPwdTapped()
-                    }
-                    .padding(.M)
-                    .font(.system(size: 28, weight: .bold, design: .monospaced))
-                
-                Image(systemName: "triangleshape.fill")
-                    .resizable()
-                    .foregroundColor(.lightGrey)
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 30, height: 30)
-                
-                HStack {
-                    VStack {
-                        Text(String(viewModel.generatedPassword().count))
-                            .font(.system(size: 24, weight: .bold))
-                        Text("characters")
-                    }
-                    .padding()
+                    .cornerRadius(15)
                     
-                    Image(.cerebro)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 50, height: 50)
-                        .padding(.horizontal)
+                    NavigationLink(
+                        "Help me to memorise it".uppercased(),
+                        destination: {
+                            GameTaskOneView(viewModel: .init(password: viewModel.generatedPassword()))
+                        }
+                    )
+                    .padding(.XS)
+                    .background(Color.primaryPink)
+                    .foregroundColor(.white)
+                    .cornerRadius(.XS)
+                    .bold()
+                    .disabled(false)
+                    .padding(.XS)
+                    
+                    Button(action: {
+                        // to do navigation
+                    }, label: {
+                        Text(("Try again").uppercased())
+                            .padding(.XS)
+                            .foregroundColor(.white)
+                            .background(Color.primaryPink)
+                            .cornerRadius(8)
+                            .bold()
+                            
+                    })
                 }
-                .padding()
-                .background(Color.lightGrey)
-                .cornerRadius(15)
-                
-                NavigationLink(
-                    "Help me to memorise it".uppercased(),
-                    destination: {
-                        GameTaskOneView(viewModel: .init(password: viewModel.generatedPassword()))
-                    }
-                )
-                .padding(.XS)
-                .background(Color.primaryPink)
-                .foregroundColor(.white)
-                .cornerRadius(.XS)
-                .bold()
-                .disabled(false)
-                .padding(.XS)
-                
-                Button(action: {
-                    // to do navigation
-                }, label: {
-                    Text(("Try again").uppercased())
-                        .padding(.XS)
-                        .foregroundColor(.white)
-                        .background(Color.primaryPink)
-                        .cornerRadius(8)
-                        .bold()
-                        
-                })
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                .padding(.S)
+                .background(Color.white)
+                .cornerRadius(25)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .padding(.S)
-            .background(Color.white)
-            .cornerRadius(25)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .padding()
+            .background(Color.primaryPink)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .padding()
-        .background(Color.primaryPink)
     }
     
     private func pwdToggle(text: String, showPwd: Bool) -> String {
