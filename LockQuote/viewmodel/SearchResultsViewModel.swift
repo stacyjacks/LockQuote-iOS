@@ -14,6 +14,7 @@ struct Song: Equatable, Hashable, Identifiable {
     var name: String
     var artist: String
     var apiPath: String
+    var thumbnail: String
 }
 
 extension Song {
@@ -21,7 +22,8 @@ extension Song {
         id: UUID().uuidString, 
         name: "Song name",
         artist: "Artist name",
-        apiPath: "/song_name_whatever"
+        apiPath: "/song_name_whatever",
+        thumbnail: "image.jpg"
     )
 }
 

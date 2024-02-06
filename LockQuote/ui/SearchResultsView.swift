@@ -27,7 +27,7 @@ struct SearchResultsView: View {
                         LyricView(viewModel: .init(path: song.apiPath))
                     } label: {
                         SongItemView(song: song)
-                    }.buttonStyle(.plain)
+                    }
                 }
             }
             .redacted(reason: viewModel.isLoading ? .placeholder : [])
@@ -49,6 +49,8 @@ struct SearchResultsView: View {
 
 struct ContentViews_Previews: PreviewProvider {
     static var previews: some View {
-        SearchResultsView(viewModel: .init(query: ""))
+        NavigationView {
+            SearchResultsView(viewModel: .init(query: ""))
+        }
     }
 }

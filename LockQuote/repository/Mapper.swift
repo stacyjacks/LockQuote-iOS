@@ -25,7 +25,8 @@ extension Song {
             id: String(dto.id), 
             name: dto.title,
             artist: dto.primary_artist.name,
-            apiPath: dto.api_path
+            apiPath: dto.api_path,
+            thumbnail: dto.header_image_thumbnail_url
         )
     }
 }

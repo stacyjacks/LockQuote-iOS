@@ -12,15 +12,15 @@ struct SongItemView: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "music.note.list")
-                .resizable()
+            AsyncImage(url: URL(string: song.thumbnail), scale: 6)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35)
+                .frame(width: 40, height: 40)
             
             VStack(alignment: .leading) {
                 Text(song.name)
                 Text(song.artist)
             }
+            .padding(.horizontal)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -34,7 +34,7 @@ struct SongItemView_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             VStack {
-                SongItemView(song: .init(id: "", name: "Song name asdf asdfad asdfasd fasdf asdfas dfasdf as", artist: "Artist name", apiPath: ""))
+                SongItemView(song: .init(id: "", name: "Song name asdf asdfad asdfasd as", artist: "Artist name", apiPath: "", thumbnail: ""))
                 SongItemView(song: .skeleton)
                 SongItemView(song: .skeleton)
             }
