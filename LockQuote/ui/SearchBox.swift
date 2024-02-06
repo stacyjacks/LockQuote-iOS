@@ -15,7 +15,7 @@ struct SearchBox: View {
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
-            TextField("Enter song name or a lyric excerpt", text: $query)
+            TextField("queryHint", text: $query)
         }
         .padding(16)
         .background(

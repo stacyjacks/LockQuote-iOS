@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  LockQuote
+
+  Created by Anastasia on 6/2/24.
+  
+*/
+
+// Buttons
+"useButton %lld" = "USAR SELECCIÓN (%lld)";
+"helpMeButton" = "¡AYÚDAME A MEMORIZARLA!";
+"tryAgainButton" = "INTENTARLO DE NUEVO";
+"clearButton" = "Limpiar";
+"continueButton" = "CONTINUAR";
+
+
+// Texts
+"queryHint" = "Busca canciones o un fragmento de letra";
+"selectTextHint" = "Selecciona un fragmento de la letra de 4 a 15 palabras y haz clic en Copiar";
+"justASec" = "UN SEGUNDO";
+"yourPassword" = "Tu contraseña";
+"takeAGoodLook" = "Echa un vistazo a la letra seleccionada y la contraseña que hemos generado para ti:";
+"characters" = "caracteres";
+"memorisationTask %@" = "Memorización en progreso... Tarea %@/5";
+"enterPwdHint" = "Introduce la contraseña completa exactamente como aparece a continuación:";
+"great" = "¡Genial!";
+

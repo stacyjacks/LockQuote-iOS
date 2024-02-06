@@ -12,15 +12,13 @@ struct LyricView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            VStack {
                 Text(
-                    viewModel.currentPasteboard
-                    ?? "Select an excerpt from the lyric from 4 to 15 words, and hit Copy"
+                    LocalizedStringKey(viewModel.currentPasteboard ?? "selectTextHint")
                 )
-                .padding()
                 
                 NavigationLink(
-                    "USE SELECTION (\(viewModel.countWords()))",
+                    "useButton \(viewModel.countWords())",
                     destination: {
                         GeneratedPasswordView(
                             viewModel: .init(selectedLyric: viewModel.currentPasteboard!)
@@ -28,9 +26,9 @@ struct LyricView: View {
                     }
                 )
                 .buttonStyle(.bordered)
-                .padding()
                 .disabled(viewModel.selectionError)
             }
+            .padding()
             .foregroundColor(Color.white)
             
             WebView(url: URL(string: viewModel.buildUrl())!)

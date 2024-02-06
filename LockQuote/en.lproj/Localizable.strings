@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  LockQuote
+
+  Created by Anastasia on 6/2/24.
+  
+*/
+
+// Buttons
+"useButton %lld" = "USE SELECTION (%lld)";
+"helpMeButton" = "HELP ME TO MEMORISE IT!";
+"tryAgainButton" = "TRY AGAIN";
+"clearButton" = "CLEAR";
+"continueButton" = "CONTINUE";
+
+
+// Texts
+"queryHint" = "Enter song name or a lyric excerpt";
+"selectTextHint" = "Select an excerpt from the lyric from 4 to 15 words, and hit Copy";
+"justASec" = "JUST A SEC";
+"yourPassword" = "Your password";
+"takeAGoodLook" = "Take a good look at the selected lyric and the password we've generated for you:";
+"characters" = "characters";
+"memorisationTask %@" = "Memorisation in progress... TASK %@/5";
+"enterPwdHint" = "Enter password exactly as it appears below:";
+"great" = "Great!";
+

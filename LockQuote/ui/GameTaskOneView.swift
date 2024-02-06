@@ -14,12 +14,12 @@ struct GameTaskOneView: View {
     
     var body: some View {
         VStack {
-            Text("Memorisation in progress... TASK 1/5")
+            Text("memorisationTask \("1")")
                 .foregroundColor(.white)
                 .padding(.XS)
             
             VStack {
-                Text("Enter password exactly as it appears below:")
+                Text("enterPwdHint")
                     .padding(.XS)
                     .multilineTextAlignment(.leading)
                 HStack {
@@ -59,12 +59,12 @@ struct GameTaskOneView: View {
                         .resizable()
                         .frame(width: 250, height: 250)
                     HStack {
-                        Text("Great!")
+                        Text("great")
                             .bold()
                             .onAppear {
                                 focusedField = nil
                             }
-                        NavigationLink("Continue".uppercased(), destination: {
+                        NavigationLink("continueButton", destination: {
                             // to do navigate to game two
                         })
                         .frame(alignment: .bottom)
@@ -80,7 +80,7 @@ struct GameTaskOneView: View {
                         viewModel.clearInput()
                         focusedField = nil
                     }, label: {
-                        Text(("Clear").uppercased())
+                        Text("clearButton")
                             .padding(.XS)
                             .foregroundColor(.white)
                             .background(Color.primaryPink)

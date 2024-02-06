@@ -20,7 +20,7 @@ struct GeneratedPasswordView: View {
                     .frame(width: 250, height: 250)
                     .padding(.L)
                 
-                Text("Just a sec...".uppercased())
+                Text("justASec")
                     .foregroundColor(.white)
                     .bold()
             }
@@ -29,11 +29,11 @@ struct GeneratedPasswordView: View {
             .background(Color.primaryPink)
         } else {
             VStack(spacing: .S) {
-                Text("Your password")
+                Text("yourPassword")
                     .foregroundColor(.white)
                 
                 VStack(spacing: 0) {
-                    Text("Take a good look at the selected lyric and the password we've generated for you:")
+                    Text("takeAGoodLook")
                         .padding(.vertical)
                         .multilineTextAlignment(.leading)
                     
@@ -79,7 +79,7 @@ struct GeneratedPasswordView: View {
                     .cornerRadius(15)
                     
                     NavigationLink(
-                        "Help me to memorise it".uppercased(),
+                        "helpMeButton",
                         destination: {
                             GameTaskOneView(viewModel: .init(password: viewModel.generatedPassword()))
                         }
@@ -95,7 +95,7 @@ struct GeneratedPasswordView: View {
                     Button(action: {
                         // to do navigation
                     }, label: {
-                        Text(("Try again").uppercased())
+                        Text(("tryAgainButton"))
                             .padding(.XS)
                             .foregroundColor(.white)
                             .background(Color.primaryPink)
