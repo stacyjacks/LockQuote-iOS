@@ -22,6 +22,7 @@
 		5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2690BB2B0E27F0004CD667 /* Mapper.swift */; };
 		5D3969BC2B7246D1004D6397 /* GameTaskTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3969BB2B7246D1004D6397 /* GameTaskTwoView.swift */; };
 		5D3969C12B72526D004D6397 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D3969C32B72526D004D6397 /* Localizable.strings */; };
+		5D3969C62B738858004D6397 /* GameTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3969C52B738858004D6397 /* GameTaskView.swift */; };
 		5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464A62B5FCCEA0027AABB /* String+.swift */; };
 		5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */; };
 		5D7464AD2B6121E50027AABB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AC2B6121E50027AABB /* View+.swift */; };
@@ -84,6 +85,7 @@
 		5D3969BB2B7246D1004D6397 /* GameTaskTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskTwoView.swift; sourceTree = "<group>"; };
 		5D3969C22B72526D004D6397 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5D3969C42B725274004D6397 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D3969C52B738858004D6397 /* GameTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskView.swift; sourceTree = "<group>"; };
 		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
 		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				5D7464B22B6291FE0027AABB /* LyricView.swift */,
 				5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */,
 				5D3969BB2B7246D1004D6397 /* GameTaskTwoView.swift */,
+				5D3969C52B738858004D6397 /* GameTaskView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */,
 				5D2690B22B077833004CD667 /* ApiService.swift in Sources */,
 				5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */,
+				5D3969C62B738858004D6397 /* GameTaskView.swift in Sources */,
 				5D2690A72B076EAC004CD667 /* SearchResponseDTO.swift in Sources */,
 				5D7464B32B6291FE0027AABB /* LyricView.swift in Sources */,
 				5D2690B92B0E254E004CD667 /* SearchResultsRepository.swift in Sources */,

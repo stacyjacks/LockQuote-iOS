@@ -22,6 +22,7 @@
 "takeAGoodLook" = "Echa un vistazo a la letra seleccionada y la contraseña que hemos generado para ti:";
 "characters" = "caracteres";
 "memorisationTask %@" = "Memorización en progreso... Tarea %@/5";
-"enterPwdHint" = "Introduce la contraseña completa exactamente como aparece a continuación:";
+"taskOneEnterPwd" = "Introduce la contraseña completa exactamente como aparece a continuación:";
+"taskTwoArrangeLyrics" = "Pon las palabras de la letra en el orden correcto, arrastrando los recuadros hacia la posición correcta.";
 "great" = "¡Genial!";
 

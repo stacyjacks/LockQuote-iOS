@@ -22,6 +22,7 @@
 "takeAGoodLook" = "Take a good look at the selected lyric and the password we've generated for you:";
 "characters" = "characters";
 "memorisationTask %@" = "Memorisation in progress... TASK %@/5";
-"enterPwdHint" = "Enter password exactly as it appears below:";
+"taskOneEnterPwd" = "Enter password exactly as it appears below:";
+"taskTwoArrangeLyrics" = "Arrange the lyrics in the correct order by dragging and dropping the word boxes below:";
 "great" = "Great!";
 
