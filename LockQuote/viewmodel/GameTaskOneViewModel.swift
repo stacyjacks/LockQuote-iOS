@@ -8,13 +8,15 @@
 import Foundation
 
 final class GameTaskOneViewModel: ObservableObject {
-    init(password: String) {
+    init(password: String, lyric: String) {
         self.password = password
+        self.lyric = lyric
         pwdArray = password.map { String($0) }
         input = Array(repeating: "", count: password.count)
     }
     
     @Published var password: String
+    @Published var lyric: String
     @Published var pwdArray: [String]
     @Published var input: [String]
     @Published var correct: [Int : Bool] = [0: true]

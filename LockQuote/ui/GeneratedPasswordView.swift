@@ -81,7 +81,12 @@ struct GeneratedPasswordView: View {
                     NavigationLink(
                         "helpMeButton",
                         destination: {
-                            GameTaskOneView(viewModel: .init(password: viewModel.generatedPassword()))
+                            GameTaskOneView(
+                                viewModel: .init(
+                                    password: viewModel.generatedPassword(),
+                                    lyric: viewModel.cleanSelection()
+                                )
+                            )
                         }
                     )
                     .padding(.XS)

@@ -34,7 +34,7 @@ final class GeneratedPasswordViewModel: ObservableObject {
         }
     }
     
-    private func cleanSelection() -> String {
+    func cleanSelection() -> String {
         let selection = selectedLyric
         let cleanString = selection
             .replacingOccurrences(of: "\n", with: " ")

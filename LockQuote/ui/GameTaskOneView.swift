@@ -64,7 +64,12 @@ struct GameTaskOneView: View {
                             focusedField = nil
                         }
                     NavigationLink("continueButton", destination: {
-                        // to do navigate to game two
+                        GameTaskTwoView(
+                            viewModel: .init(
+                                password: viewModel.password,
+                                lyric: viewModel.lyric
+                            )
+                        )
                     })
                     .frame(alignment: .bottom)
                     .padding(.XS)
@@ -106,5 +111,5 @@ struct GameTaskOneView: View {
 }
 
 #Preview {
-    GameTaskOneView(viewModel: .init(password: "YcBy4"))
+    GameTaskOneView(viewModel: .init(password: "YcBy4", lyric: ""))
 }
