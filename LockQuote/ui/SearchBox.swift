@@ -16,6 +16,7 @@ struct SearchBox: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
             TextField("queryHint", text: $query)
+                .textInputAutocapitalization(.never)
         }
         .padding(16)
         .background(

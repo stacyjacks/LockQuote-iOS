@@ -41,7 +41,6 @@ final class GeneratedPasswordViewModel: ObservableObject {
             .replacingOccurrences(of: "(", with: "")
             .replacingOccurrences(of: ")", with: "")
             .replacingOccurrences(of: "\"", with: "")
-            .replacingOccurrences(of: "'", with: "")
             .replacingOccurrences(of: "!", with: "")
             .replacingOccurrences(of: ",", with: "")
             .replacingOccurrences(of: ".", with: "")

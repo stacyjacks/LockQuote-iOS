@@ -24,6 +24,10 @@ final class GameTaskOneViewModel: ObservableObject {
     
     func check(index: Int) {
         correct[index] = pwdArray[index] == input[index]
+        
+        if input[index].count > 1 {
+            input[index].removeLast()
+        }
     }
     
     func checkAllCorrect() {

@@ -34,10 +34,13 @@ struct GeneratedPasswordView: View {
                 
                 VStack(spacing: 0) {
                     Text("takeAGoodLook")
-                        .padding(.vertical)
                         .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.vertical)
                     
                     Text(viewModel.selectedLyric)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding()
                         .background(Color.lightGrey)
                         .cornerRadius(15, corners: [.topLeft, .bottomRight, .bottomLeft])
@@ -131,6 +134,6 @@ struct GeneratedPasswordView: View {
 
 #Preview {
     GeneratedPasswordView(
-        viewModel: .init(selectedLyric: "You could be young again, \n Be un-reborn again")
+        viewModel: .init(selectedLyric: "Oh I've walked on water run through fire can't seem to feel it anymore")
     )
 }
