@@ -38,7 +38,7 @@ struct GeneratedPasswordView: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.vertical)
                     
-                    Text(viewModel.selectedLyric)
+                    Text(selectedLyricFirstBold)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding()
@@ -130,10 +130,25 @@ struct GeneratedPasswordView: View {
             String(repeating: "*", count: text.count)
         }
     }
+    
+    var selectedLyricFirstBold: AttributedString {
+        var string = AttributedString(viewModel.cleanSelection())
+
+        viewModel.cleanSelection().split(separator: " ").forEach { word in
+            guard let wordStartRange = string.range(of: word)?.lowerBound else { return }
+            let wordEndRange = string.index(wordStartRange, offsetByCharacters: 1)
+            
+            string[wordStartRange..<wordEndRange].font = .boldSystemFont(ofSize: .S)
+        }
+        
+        return string
+    }
 }
 
 #Preview {
     GeneratedPasswordView(
-        viewModel: .init(selectedLyric: "Oh I've walked on water run through fire can't seem to feel it anymore")
+        viewModel: .init(
+            selectedLyric: "Oh I've walked on water run through fire can't seem to feel it anymore"
+        )
     )
 }
