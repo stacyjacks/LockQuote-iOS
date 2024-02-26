@@ -31,11 +31,7 @@ final class GameTaskOneViewModel: ObservableObject {
     }
     
     func checkAllCorrect() {
-        if !correct.values.contains(false) {
-            done = true
-        } else {
-            done = false
-        }
+        done = !correct.values.contains(false)
     }
     
     func clearInput() {

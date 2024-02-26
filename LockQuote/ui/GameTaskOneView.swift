@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Lottie
+import WrappingHStack
 
 struct GameTaskOneView: View {
     @StateObject var viewModel: GameTaskOneViewModel
@@ -22,7 +23,7 @@ struct GameTaskOneView: View {
     
     var taskOneView: some View {
         VStack {
-            HStack {
+            WrappingHStack {
                 ForEach(viewModel.pwdArray.indices, id: \.self) { index in
                     TextField(
                         viewModel.pwdArray[index],

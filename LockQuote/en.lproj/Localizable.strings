@@ -25,4 +25,8 @@
 "taskOneEnterPwd" = "Enter password exactly as it appears below:";
 "taskTwoArrangeLyrics" = "Arrange the lyrics in the correct order by dragging and dropping the word boxes below:";
 "great" = "Great!";
+"taskThreeArrangePwd" = "Now, similarly, put the characters of your new password in the correct order. Are you up to the challenge?";
+"taskFourSelectPwd" = "Select the right password from the list. Hint: sing the lyric to yourself to remember!";
+"taskFiveEnterPwd" = "Now… Do you think you're ready to use your new password? Input the correct characters, this time no hints!";
+"wellDone" = "Well done!";
 

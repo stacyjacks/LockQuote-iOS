@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Lottie
+import WrappingHStack
 
 struct GameTaskTwoView: View {
     @StateObject var viewModel: GameTaskTwoViewModel
@@ -22,7 +23,7 @@ struct GameTaskTwoView: View {
     
     var taskTwoView: some View {
         VStack {
-            HStack {
+            WrappingHStack {
                 ForEach(viewModel.shuffledArray, id: \.self) { value in
                     Text(value)
                         .padding(.XS)
@@ -60,7 +61,9 @@ struct GameTaskTwoView: View {
                     Text("great")
                         .bold()
                     NavigationLink("continueButton", destination: {
-                        // to do navigation to task 3
+                        GameTaskThreeView(
+                            viewModel: .init(password: viewModel.password)
+                        )
                     })
                     .frame(alignment: .bottom)
                     .padding(.XS)
@@ -84,6 +87,9 @@ struct GameTaskTwoView: View {
 }
 
 #Preview {
-    GameTaskTwoView(viewModel: .init(password: "", lyric: "One two three uh!"))
+    GameTaskTwoView(viewModel: .init(
+        password: "", 
+        lyric: "Oh I've walked on water run through fire can't seem to feel it anymore")
+    )
 }
 

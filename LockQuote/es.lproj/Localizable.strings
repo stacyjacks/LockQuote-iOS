@@ -25,4 +25,8 @@
 "taskOneEnterPwd" = "Introduce la contraseña completa exactamente como aparece a continuación:";
 "taskTwoArrangeLyrics" = "Pon las palabras de la letra en el orden correcto, arrastrando los recuadros hacia la posición correcta.";
 "great" = "¡Genial!";
+"taskThreeArrangePwd" = "Ahora, ordena los caracteres de tu contraseña nueva del mismo modo. ¿Crees que lo tienes ya?";
+"taskFourSelectPwd" = "Elige la contraseña correcta entre las opciones. Truco: canta la canción para recordarla.";
+"taskFiveEnterPwd" = "Y ahora… ¿Crees que te sabes ya tu contraseña nueva? Introduce los caracteres correctos, ¡esta vez sin pistas!";
+"wellDone" = "¡Muy bien!";
 

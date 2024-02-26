@@ -9,14 +9,21 @@ import SwiftUI
 
 struct GameTaskView<Content: View>: View {
     let taskNo: String
+    var title: String? = nil
     let taskHint: LocalizedStringKey
     let view: Content
     
     var body: some View {
         VStack {
-            Text("memorisationTask \(taskNo)")
-                .foregroundColor(.white)
-                .padding(.XS)
+            if title != nil {
+                Text(LocalizedStringKey(title!))
+                    .foregroundColor(.white)
+                    .padding(.XS)
+            } else {
+                Text("memorisationTask \(taskNo)")
+                    .foregroundColor(.white)
+                    .padding(.XS)
+            }
             
             VStack {
                 Text(taskHint)

@@ -25,6 +25,15 @@
 		5D3969C62B738858004D6397 /* GameTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3969C52B738858004D6397 /* GameTaskView.swift */; };
 		5D3B98612B73A37300BBA184 /* GameTaskTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98602B73A37300BBA184 /* GameTaskTwoViewModel.swift */; };
 		5D3B98652B73CFCD00BBA184 /* DragDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98642B73CFCD00BBA184 /* DragDropDelegate.swift */; };
+		5D3B98682B750B4500BBA184 /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 5D3B98672B750B4500BBA184 /* WrappingHStack */; };
+		5D3B986A2B8C8DD600BBA184 /* GameTaskThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98692B8C8DD600BBA184 /* GameTaskThreeView.swift */; };
+		5D3B986C2B8C8DF400BBA184 /* GameTaskFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B986B2B8C8DF400BBA184 /* GameTaskFourView.swift */; };
+		5D3B986E2B8C913C00BBA184 /* GameTaskFourViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B986D2B8C913C00BBA184 /* GameTaskFourViewModel.swift */; };
+		5D3B98702B8C9F3B00BBA184 /* GameTaskThreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B986F2B8C9F3B00BBA184 /* GameTaskThreeViewModel.swift */; };
+		5D3B98722B8CF45600BBA184 /* GameTaskFiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98712B8CF45600BBA184 /* GameTaskFiveView.swift */; };
+		5D3B98742B8CF91600BBA184 /* GameTaskFiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98732B8CF91600BBA184 /* GameTaskFiveViewModel.swift */; };
+		5D3B98762B8CF9AE00BBA184 /* GameResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */; };
+		5D3B98782B8D00CE00BBA184 /* GameResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */; };
 		5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464A62B5FCCEA0027AABB /* String+.swift */; };
 		5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */; };
 		5D7464AD2B6121E50027AABB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AC2B6121E50027AABB /* View+.swift */; };
@@ -90,6 +99,14 @@
 		5D3969C52B738858004D6397 /* GameTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskView.swift; sourceTree = "<group>"; };
 		5D3B98602B73A37300BBA184 /* GameTaskTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskTwoViewModel.swift; sourceTree = "<group>"; };
 		5D3B98642B73CFCD00BBA184 /* DragDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragDropDelegate.swift; sourceTree = "<group>"; };
+		5D3B98692B8C8DD600BBA184 /* GameTaskThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskThreeView.swift; sourceTree = "<group>"; };
+		5D3B986B2B8C8DF400BBA184 /* GameTaskFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskFourView.swift; sourceTree = "<group>"; };
+		5D3B986D2B8C913C00BBA184 /* GameTaskFourViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskFourViewModel.swift; sourceTree = "<group>"; };
+		5D3B986F2B8C9F3B00BBA184 /* GameTaskThreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskThreeViewModel.swift; sourceTree = "<group>"; };
+		5D3B98712B8CF45600BBA184 /* GameTaskFiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskFiveView.swift; sourceTree = "<group>"; };
+		5D3B98732B8CF91600BBA184 /* GameTaskFiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTaskFiveViewModel.swift; sourceTree = "<group>"; };
+		5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultView.swift; sourceTree = "<group>"; };
+		5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewModel.swift; sourceTree = "<group>"; };
 		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
 		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -125,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3B98682B750B4500BBA184 /* WrappingHStack in Frameworks */,
 				5D7464BC2B70F08E0027AABB /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +173,10 @@
 				5D7464B42B62923E0027AABB /* LyricViewModel.swift */,
 				5D7464B82B6A70930027AABB /* GameTaskOneViewModel.swift */,
 				5D3B98602B73A37300BBA184 /* GameTaskTwoViewModel.swift */,
+				5D3B986D2B8C913C00BBA184 /* GameTaskFourViewModel.swift */,
+				5D3B986F2B8C9F3B00BBA184 /* GameTaskThreeViewModel.swift */,
+				5D3B98732B8CF91600BBA184 /* GameTaskFiveViewModel.swift */,
+				5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -296,6 +318,10 @@
 				5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */,
 				5D3969BB2B7246D1004D6397 /* GameTaskTwoView.swift */,
 				5D3969C52B738858004D6397 /* GameTaskView.swift */,
+				5D3B98692B8C8DD600BBA184 /* GameTaskThreeView.swift */,
+				5D3B986B2B8C8DF400BBA184 /* GameTaskFourView.swift */,
+				5D3B98712B8CF45600BBA184 /* GameTaskFiveView.swift */,
+				5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -328,6 +354,7 @@
 			name = LockQuote;
 			packageProductDependencies = (
 				5D7464BB2B70F08E0027AABB /* Lottie */,
+				5D3B98672B750B4500BBA184 /* WrappingHStack */,
 			);
 			productName = LockQuote;
 			productReference = 5D76D5B62AEBA4DD00BAF61E /* LockQuote.app */;
@@ -404,6 +431,7 @@
 			mainGroup = 5D76D5AD2AEBA4DD00BAF61E;
 			packageReferences = (
 				5D7464BA2B70F08E0027AABB /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				5D3B98662B750B4500BBA184 /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 			);
 			productRefGroup = 5D76D5B72AEBA4DD00BAF61E /* Products */;
 			projectDirPath = "";
@@ -456,22 +484,28 @@
 				5D76D5BC2AEBA4DD00BAF61E /* StartView.swift in Sources */,
 				5DBD0AE32B59458C007EA710 /* WebView.swift in Sources */,
 				5DBD0AE12B555ACC007EA710 /* StartViewModel.swift in Sources */,
+				5D3B986A2B8C8DD600BBA184 /* GameTaskThreeView.swift in Sources */,
 				5D2690AC2B076F6A004CD667 /* HitDTO.swift in Sources */,
 				5D7464AD2B6121E50027AABB /* View+.swift in Sources */,
+				5D3B986C2B8C8DF400BBA184 /* GameTaskFourView.swift in Sources */,
 				5D76D5EA2AEBC48100BAF61E /* SearchBox.swift in Sources */,
 				5D2690B42B077915004CD667 /* Environment.swift in Sources */,
 				5D3B98612B73A37300BBA184 /* GameTaskTwoViewModel.swift in Sources */,
+				5D3B98702B8C9F3B00BBA184 /* GameTaskThreeViewModel.swift in Sources */,
 				5D3969BC2B7246D1004D6397 /* GameTaskTwoView.swift in Sources */,
 				5D2690B02B0770B4004CD667 /* PrimaryArtistDTO.swift in Sources */,
 				5D2690AE2B076FFD004CD667 /* SongDTO.swift in Sources */,
 				5D7464B72B693A2D0027AABB /* GameTaskOneView.swift in Sources */,
 				5D1A8D7F2AF3B1BD0043736D /* SongItemView.swift in Sources */,
+				5D3B98782B8D00CE00BBA184 /* GameResultViewModel.swift in Sources */,
 				5D76D5E62AEBC12300BAF61E /* SearchResultsView.swift in Sources */,
 				5D2690B72B0E1537004CD667 /* SearchResultsLiveRepository.swift in Sources */,
 				5DBD0ADF2B55512F007EA710 /* Binding+.swift in Sources */,
+				5D3B98742B8CF91600BBA184 /* GameTaskFiveViewModel.swift in Sources */,
 				5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */,
 				5D2690B22B077833004CD667 /* ApiService.swift in Sources */,
 				5D2690BC2B0E27F0004CD667 /* Mapper.swift in Sources */,
+				5D3B98722B8CF45600BBA184 /* GameTaskFiveView.swift in Sources */,
 				5D3969C62B738858004D6397 /* GameTaskView.swift in Sources */,
 				5D2690A72B076EAC004CD667 /* SearchResponseDTO.swift in Sources */,
 				5D7464B32B6291FE0027AABB /* LyricView.swift in Sources */,
@@ -482,9 +516,11 @@
 				5D7464B12B612A7A0027AABB /* GeneratedPasswordViewModel.swift in Sources */,
 				5D7464B52B62923E0027AABB /* LyricViewModel.swift in Sources */,
 				5D2690AA2B076F1B004CD667 /* HitsDTO.swift in Sources */,
+				5D3B98762B8CF9AE00BBA184 /* GameResultView.swift in Sources */,
 				5D1A8D862AF3EFDD0043736D /* Extensions.swift in Sources */,
 				5D7464B92B6A70930027AABB /* GameTaskOneViewModel.swift in Sources */,
 				5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */,
+				5D3B986E2B8C913C00BBA184 /* GameTaskFourViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -829,6 +865,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5D3B98662B750B4500BBA184 /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ksemianov/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		5D7464BA2B70F08E0027AABB /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios";
@@ -840,6 +884,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5D3B98672B750B4500BBA184 /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D3B98662B750B4500BBA184 /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
+		};
 		5D7464BB2B70F08E0027AABB /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5D7464BA2B70F08E0027AABB /* XCRemoteSwiftPackageReference "lottie-ios" */;
