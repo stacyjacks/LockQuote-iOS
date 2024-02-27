@@ -13,10 +13,12 @@ final class GeneratedPasswordViewModel: ObservableObject {
     init(selectedLyric: String) {
         self.selectedLyric = selectedLyric
         showLoadingForTwoSecs()
+        password = generatedPassword()
     }
     
     @Published var showPwd: Bool = false
     @Published var hideLoading: Bool = false
+    @Published var password: String = ""
     
     func onPwdTapped() {
         if showPwd {
@@ -59,7 +61,7 @@ final class GeneratedPasswordViewModel: ObservableObject {
         return string
     }
     
-    func generatedPassword() -> String {
+    private func generatedPassword() -> String {
         let aLetter = ["A", "a", "4"]
         let sLetter = ["S", "s", "5"]
         let eLetter = ["E", "e", "3"]

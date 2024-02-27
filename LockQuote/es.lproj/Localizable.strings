@@ -12,6 +12,9 @@
 "tryAgainButton" = "INTENTARLO DE NUEVO";
 "clearButton" = "Limpiar";
 "continueButton" = "CONTINUAR";
+"anotherGoButton" = "REPASAR JUEGOS";
+"makeNewPwdButton" = "NUEVA CONTRASEÑA";
+"copyButton" = "COPIAR A PORTAPAPELES";
 
 
 // Texts
@@ -29,4 +32,5 @@
 "taskFourSelectPwd" = "Elige la contraseña correcta entre las opciones. Truco: canta la canción para recordarla.";
 "taskFiveEnterPwd" = "Y ahora… ¿Crees que te sabes ya tu contraseña nueva? Introduce los caracteres correctos, ¡esta vez sin pistas!";
 "wellDone" = "¡Muy bien!";
+"congratsNewPassword" = "¡Enhorabuena! Ya puedes empezar a usar tu contraseña nueva. Mírala bien, cópiala o haz lo que quieras con ella:";
 

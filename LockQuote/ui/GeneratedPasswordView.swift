@@ -48,7 +48,7 @@ struct GeneratedPasswordView: View {
                         .italic()
                     
                     Text(pwdToggle(
-                        text: viewModel.generatedPassword(),
+                        text: viewModel.password,
                         showPwd: viewModel.showPwd
                     ))
                         .onTapGesture {
@@ -65,7 +65,7 @@ struct GeneratedPasswordView: View {
                     
                     HStack {
                         VStack {
-                            Text(String(viewModel.generatedPassword().count))
+                            Text(String(viewModel.password.count))
                                 .font(.system(size: 24, weight: .bold))
                             Text("characters")
                         }
@@ -86,7 +86,7 @@ struct GeneratedPasswordView: View {
                         destination: {
                             GameTaskOneView(
                                 viewModel: .init(
-                                    password: viewModel.generatedPassword(),
+                                    password: viewModel.password,
                                     lyric: viewModel.cleanSelection()
                                 )
                             )
@@ -100,17 +100,11 @@ struct GeneratedPasswordView: View {
                     .disabled(false)
                     .padding(.XS)
                     
-                    Button(action: {
-                        // to do navigation
-                    }, label: {
-                        Text(("tryAgainButton"))
-                            .padding(.XS)
-                            .foregroundColor(.white)
-                            .background(Color.primaryPink)
-                            .cornerRadius(8)
-                            .bold()
-                            
-                    })
+                    LockQuoteButton(
+                        action: {
+                            // to do navigation back
+                        },
+                        string: "tryAgainButton")
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.S)

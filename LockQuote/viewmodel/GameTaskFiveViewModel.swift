@@ -13,4 +13,8 @@ final class GameTaskFiveViewModel: ObservableObject {
     }
     
     @Published var password: String
+    
+    func clearInput() {
+       // input = Array(repeating: "", count: password.count)
+    }
 }

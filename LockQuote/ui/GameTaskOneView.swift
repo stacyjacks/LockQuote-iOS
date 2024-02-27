@@ -63,18 +63,13 @@ struct GameTaskOneView: View {
                     onAppear: { focusedField = nil }
                 )
             } else {
-                Button(action: {
-                    viewModel.clearInput()
-                    focusedField = nil
-                }, label: {
-                    Text("clearButton")
-                        .padding(.XS)
-                        .foregroundColor(.white)
-                        .background(Color.primaryPink)
-                        .cornerRadius(.XS)
-                        .bold()
-                        
-                })
+                LockQuoteButton(
+                    action: {
+                        viewModel.clearInput()
+                        focusedField = nil
+                    },
+                    string: "clearButton"
+                )
                 .padding(.M)
             }
         }

@@ -35,6 +35,7 @@
 		5D3B98762B8CF9AE00BBA184 /* GameResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */; };
 		5D3B98782B8D00CE00BBA184 /* GameResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */; };
 		5D3B987A2B8DF3DC00BBA184 /* TaskDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */; };
+		5D3B987C2B8E0DC300BBA184 /* LockQuoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */; };
 		5D7464A72B5FCCEA0027AABB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464A62B5FCCEA0027AABB /* String+.swift */; };
 		5D7464AB2B5FF2260027AABB /* GeneratedPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */; };
 		5D7464AD2B6121E50027AABB /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7464AC2B6121E50027AABB /* View+.swift */; };
@@ -109,6 +110,7 @@
 		5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultView.swift; sourceTree = "<group>"; };
 		5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewModel.swift; sourceTree = "<group>"; };
 		5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDoneView.swift; sourceTree = "<group>"; };
+		5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteButton.swift; sourceTree = "<group>"; };
 		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
 		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -171,8 +173,8 @@
 			children = (
 				5D1A8D812AF3BBCC0043736D /* SearchResultsViewModel.swift */,
 				5DBD0AE02B555ACC007EA710 /* StartViewModel.swift */,
-				5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */,
 				5D7464B42B62923E0027AABB /* LyricViewModel.swift */,
+				5D7464B02B612A7A0027AABB /* GeneratedPasswordViewModel.swift */,
 				5D7464B82B6A70930027AABB /* GameTaskOneViewModel.swift */,
 				5D3B98602B73A37300BBA184 /* GameTaskTwoViewModel.swift */,
 				5D3B986D2B8C913C00BBA184 /* GameTaskFourViewModel.swift */,
@@ -325,6 +327,7 @@
 				5D3B98712B8CF45600BBA184 /* GameTaskFiveView.swift */,
 				5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */,
 				5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */,
+				5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				5D1A8D7F2AF3B1BD0043736D /* SongItemView.swift in Sources */,
 				5D3B98782B8D00CE00BBA184 /* GameResultViewModel.swift in Sources */,
 				5D76D5E62AEBC12300BAF61E /* SearchResultsView.swift in Sources */,
+				5D3B987C2B8E0DC300BBA184 /* LockQuoteButton.swift in Sources */,
 				5D2690B72B0E1537004CD667 /* SearchResultsLiveRepository.swift in Sources */,
 				5DBD0ADF2B55512F007EA710 /* Binding+.swift in Sources */,
 				5D3B98742B8CF91600BBA184 /* GameTaskFiveViewModel.swift in Sources */,

@@ -12,6 +12,9 @@
 "tryAgainButton" = "TRY AGAIN";
 "clearButton" = "CLEAR";
 "continueButton" = "CONTINUE";
+"anotherGoButton" = "REVISIT THE GAMES";
+"makeNewPwdButton" = "NEW PASSWORD";
+"copyButton" = "COPY TO CLIPBOARD";
 
 
 // Texts
@@ -29,4 +32,7 @@
 "taskFourSelectPwd" = "Select the right password from the list. Hint: sing the lyric to yourself to remember!";
 "taskFiveEnterPwd" = "Now… Do you think you're ready to use your new password? Input the correct characters, this time no hints!";
 "wellDone" = "Well done!";
+"congratsNewPassword" = "Congratulations! You're ready to use your new password. Take another good look at it, copy it, or do whatever:";
+
+
 

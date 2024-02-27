@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameTaskFiveView: View {
     @StateObject var viewModel: GameTaskFiveViewModel
+    @FocusState private var focusedField: Int?
     
     var body: some View {
         GameTaskView(
@@ -31,6 +32,15 @@ struct GameTaskFiveView: View {
                 ),
                 onAppear: { /* does not apply */ }
             )
+            /* else */
+            LockQuoteButton(
+                action: {
+                    viewModel.clearInput()
+                    focusedField = nil
+                },
+                string: "clearButton"
+            )
+            .padding(.M)
         }
     }
 }
