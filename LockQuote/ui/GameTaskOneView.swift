@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Lottie
 import WrappingHStack
 
 struct GameTaskOneView: View {
@@ -54,32 +53,15 @@ struct GameTaskOneView: View {
             }
             
             if viewModel.done {
-                LottieView(animation: .named("checkmarklightgreen"))
-                    .playing(loopMode: .loop)
-                    .resizable()
-                    .frame(width: 250, height: 250)
-                HStack {
-                    Text("great")
-                        .bold()
-                        .onAppear {
-                            focusedField = nil
-                        }
-                    NavigationLink("continueButton", destination: {
-                        GameTaskTwoView(
-                            viewModel: .init(
-                                password: viewModel.password,
-                                lyric: viewModel.lyric
-                            )
+                TaskDoneView(
+                    navigationView: GameTaskTwoView(
+                        viewModel: .init(
+                            password: viewModel.password,
+                            lyric: viewModel.lyric
                         )
-                    })
-                    .frame(alignment: .bottom)
-                    .padding(.XS)
-                    .background(Color.lightGreen)
-                    .foregroundColor(.white)
-                    .cornerRadius(.XS)
-                    .bold()
-                    .disabled(false)
-                }
+                    ), 
+                    onAppear: { focusedField = nil }
+                )
             } else {
                 Button(action: {
                     viewModel.clearInput()
@@ -112,5 +94,7 @@ struct GameTaskOneView: View {
 }
 
 #Preview {
-    GameTaskOneView(viewModel: .init(password: "YcBy4", lyric: ""))
+    NavigationView {
+        GameTaskOneView(viewModel: .init(password: "YcBy4", lyric: ""))
+    }
 }

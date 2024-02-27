@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct GameTaskFiveView: View {
     @StateObject var viewModel: GameTaskFiveViewModel
@@ -21,7 +20,17 @@ struct GameTaskFiveView: View {
     
     var taskFiveView: some View {
         VStack {
+            // to do add task with textfields
             
+            /* if viewModel.pwdArray == whatever */
+            TaskDoneView(
+                navigationView: GameResultView(
+                    viewModel: .init(
+                        password: viewModel.password
+                    )
+                ),
+                onAppear: { /* does not apply */ }
+            )
         }
     }
 }

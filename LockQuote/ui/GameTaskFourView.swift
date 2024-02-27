@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct GameTaskFourView: View {
     @StateObject var viewModel: GameTaskFourViewModel
@@ -36,26 +35,14 @@ struct GameTaskFourView: View {
             }
             
             if viewModel.selected == viewModel.password {
-                LottieView(animation: .named("checkmarklightgreen"))
-                    .playing(loopMode: .loop)
-                    .resizable()
-                    .frame(width: 250, height: 250)
-                HStack {
-                    Text("great")
-                        .bold()
-                    NavigationLink("continueButton", destination: {
-                        GameTaskFiveView(
-                            viewModel: .init(password: viewModel.password)
+                TaskDoneView(
+                    navigationView: GameTaskFiveView(
+                        viewModel: .init(
+                            password: viewModel.password
                         )
-                    })
-                    .frame(alignment: .bottom)
-                    .padding(.XS)
-                    .background(Color.lightGreen)
-                    .foregroundColor(.white)
-                    .cornerRadius(.XS)
-                    .bold()
-                    .disabled(false)
-                }
+                    ),
+                    onAppear: { /* does not apply */ }
+                )
             }
         }
     }

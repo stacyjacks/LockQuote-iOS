@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct GameTaskThreeView: View {
     @StateObject var viewModel: GameTaskThreeViewModel
@@ -21,11 +20,17 @@ struct GameTaskThreeView: View {
     
     var taskThreeView: some View {
         VStack {
-            NavigationLink("continueButton", destination: {
-                GameTaskFourView(
-                    viewModel: .init(password: viewModel.password)
-                )
-            })
+            Text(viewModel.password) // to do add task with drag and drop password chars
+            
+            /* if viewModel.pwdArray == whatever */
+            TaskDoneView(
+                navigationView: GameTaskFourView(
+                    viewModel: .init(
+                        password: viewModel.password
+                    )
+                ),
+                onAppear: { /* does not apply */ }
+            )
         }
     }
 }

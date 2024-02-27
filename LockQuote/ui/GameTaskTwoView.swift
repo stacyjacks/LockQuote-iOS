@@ -53,26 +53,14 @@ struct GameTaskTwoView: View {
             }
 
             if viewModel.shuffledArray == viewModel.lyricArray {
-                LottieView(animation: .named("checkmarklightgreen"))
-                    .playing(loopMode: .loop)
-                    .resizable()
-                    .frame(width: 250, height: 250)
-                HStack {
-                    Text("great")
-                        .bold()
-                    NavigationLink("continueButton", destination: {
-                        GameTaskThreeView(
-                            viewModel: .init(password: viewModel.password)
+                TaskDoneView(
+                    navigationView: GameTaskThreeView(
+                        viewModel: .init(
+                            password: viewModel.password
                         )
-                    })
-                    .frame(alignment: .bottom)
-                    .padding(.XS)
-                    .background(Color.lightGreen)
-                    .foregroundColor(.white)
-                    .cornerRadius(.XS)
-                    .bold()
-                    .disabled(false)
-                }
+                    ),
+                    onAppear: { /* does not apply */ }
+                )
             }
         }
     }
