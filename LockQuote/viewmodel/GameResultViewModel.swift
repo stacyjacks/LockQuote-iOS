@@ -16,6 +16,7 @@ final class GameResultViewModel: ObservableObject {
     @Published var password: String
     @Published var showPwd: Bool = false
     @Published var pasteboard = UIPasteboard.general
+    @Published var showInfo: Bool = false
     
     func onCopyTapped() {
         pasteboard.string = password
@@ -26,6 +27,14 @@ final class GameResultViewModel: ObservableObject {
             showPwd = false
         } else {
             showPwd = true
+        }
+    }
+    
+    func onLightbulbTapped() {
+        if showInfo {
+            showInfo = false
+        } else {
+            showInfo = true
         }
     }
 }

@@ -111,6 +111,7 @@
 		5D3B98772B8D00CE00BBA184 /* GameResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewModel.swift; sourceTree = "<group>"; };
 		5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDoneView.swift; sourceTree = "<group>"; };
 		5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockQuoteButton.swift; sourceTree = "<group>"; };
+		5D3B987E2B90A9D300BBA184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5D7464A62B5FCCEA0027AABB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPasswordView.swift; sourceTree = "<group>"; };
 		5D7464AC2B6121E50027AABB /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -214,6 +215,18 @@
 			path = repository;
 			sourceTree = "<group>";
 		};
+		5D3B987D2B90983100BBA184 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD0AE22B59458C007EA710 /* WebView.swift */,
+				5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */,
+				5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */,
+				5D3969C52B738858004D6397 /* GameTaskView.swift */,
+				5D76D5E92AEBC48100BAF61E /* SearchBox.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		5D7464BD2B70F2B80027AABB /* extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +281,7 @@
 		5D76D5B82AEBA4DD00BAF61E /* LockQuote */ = {
 			isa = PBXGroup;
 			children = (
+				5D3B987E2B90A9D300BBA184 /* Info.plist */,
 				5D7464BE2B70F3430027AABB /* resources */,
 				5D7464BD2B70F2B80027AABB /* extensions */,
 				5D2690B52B0E1512004CD667 /* repository */,
@@ -312,22 +326,18 @@
 		5D76D5E32AEBBB3300BAF61E /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				5D3B987D2B90983100BBA184 /* common */,
 				5D76D5BB2AEBA4DD00BAF61E /* StartView.swift */,
 				5D76D5E52AEBC12300BAF61E /* SearchResultsView.swift */,
-				5D76D5E92AEBC48100BAF61E /* SearchBox.swift */,
 				5D1A8D7E2AF3B1BD0043736D /* SongItemView.swift */,
-				5DBD0AE22B59458C007EA710 /* WebView.swift */,
 				5D7464AA2B5FF2260027AABB /* GeneratedPasswordView.swift */,
 				5D7464B22B6291FE0027AABB /* LyricView.swift */,
 				5D7464B62B693A2D0027AABB /* GameTaskOneView.swift */,
 				5D3969BB2B7246D1004D6397 /* GameTaskTwoView.swift */,
-				5D3969C52B738858004D6397 /* GameTaskView.swift */,
 				5D3B98692B8C8DD600BBA184 /* GameTaskThreeView.swift */,
 				5D3B986B2B8C8DF400BBA184 /* GameTaskFourView.swift */,
 				5D3B98712B8CF45600BBA184 /* GameTaskFiveView.swift */,
 				5D3B98752B8CF9AE00BBA184 /* GameResultView.swift */,
-				5D3B98792B8DF3DC00BBA184 /* TaskDoneView.swift */,
-				5D3B987B2B8E0DC300BBA184 /* LockQuoteButton.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -707,12 +717,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockQuote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,12 +751,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LockQuote/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

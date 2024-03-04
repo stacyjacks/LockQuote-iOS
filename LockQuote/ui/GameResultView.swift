@@ -50,8 +50,24 @@ struct GameResultView: View {
             )
             LockQuoteButton(
                 action: {/* to do */},
-                string: "makeNewPwdButton"
+                string: "makeNewPwdButton",
+                width: 180
             )
+            .padding(.bottom)
+            
+            HStack {
+                Text("LockQuote").padding(.vertical)
+                Image(systemName: "lightbulb.circle.fill")
+            }
+            .onTapGesture {
+                viewModel.onLightbulbTapped()
+            }
+            .alert(isPresented: $viewModel.showInfo) {
+                Alert(
+                    title: Text(getAppVersion()),
+                    message: Text("aboutMessage")
+                )
+            }
         }
     }
     
@@ -60,6 +76,15 @@ struct GameResultView: View {
             text
         } else {
             String(repeating: "*", count: text.count)
+        }
+    }
+    
+    private func getAppVersion() -> String {
+        if let appVersion =
+            Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+            return "LockQuote \(appVersion)"
+        } else {
+            return "LockQuote"
         }
     }
 }

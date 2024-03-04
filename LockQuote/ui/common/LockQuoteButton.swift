@@ -10,6 +10,7 @@ import SwiftUI
 struct LockQuoteButton: View {
     let action: () -> Void
     let string: String
+    var width: CGFloat? = .infinity
     
     var body: some View {
         Button(
@@ -17,12 +18,14 @@ struct LockQuoteButton: View {
             label: {
                 Text(LocalizedStringKey(string))
                     .padding(.XS)
-                    .foregroundColor(.white)
-                    .background(Color.primaryPink)
-                    .cornerRadius(.XS)
                     .bold()
             }
         )
+        .frame(width: width)
+        .foregroundColor(.white)
+        .background(Color.primaryPink)
+        .cornerRadius(.XS)
+        
     }
 }
 
