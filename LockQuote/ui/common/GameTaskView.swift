@@ -18,19 +18,23 @@ struct GameTaskView<Content: View>: View {
             if title != nil {
                 Text(LocalizedStringKey(title!))
                     .foregroundColor(.white)
-                    .padding(.XS)
+                    .padding(.bottom)
+                    .font(.headline)
             } else {
                 Text("memorisationTask \(taskNo)")
                     .foregroundColor(.white)
-                    .padding(.XS)
+                    .padding(.bottom)
+                    .font(.headline)
             }
             
-            VStack {
-                Text(taskHint)
-                    .padding(.XS)
-                    .multilineTextAlignment(.leading)
-                
-                view.padding(.M)
+            ScrollView {
+                VStack {
+                    Text(taskHint)
+                        .padding(.XS)
+                        .multilineTextAlignment(.leading)
+                    
+                    view.padding(.M)
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .padding(.vertical)
